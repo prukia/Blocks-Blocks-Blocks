@@ -1,0 +1,19 @@
+body {
+  background-color: #ffffff;
+}
+h1{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Lemonada', cursive;
+}
+
+button {
+  width: 100%;
+}
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: purple;
+  border: 5px solid black;
+  display: inline-block;
+}
