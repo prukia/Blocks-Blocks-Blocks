@@ -1,25 +1,28 @@
 $(function () {
   console.log('document is ready');
 
-  $('.square').on('click', '.delete', function () {
-      $(this).parent().parent().remove();
-    });
+
 
 $('button').on('click', function () {
-     $('body').append('<div class="square"></div>');
+     $('#boxX').append('<div class="square"><button class="delete">X</button></div>');
+     $('.square:last').css('background-color', randomNumber());
      console.log("Yay!You made a square!");
+
+     //:last finds the last div with a class of square that was appended to DOM
   });
-$('body').on('click', '.square', function (){
+$('#boxX').on('click', '.square', function (){
   $(this).css('background-color', 'black');
   console.log('Square is now black');
   //look in body on click in the square div and turn the box black
 });
-$('body').on('click', '.square' ,function (){
-  $(this).css('background-color', randomNumber());
-  console.log("Now it's a random color!Cool Beans.");
-
-});
-
+// $('body').on('click', '.square' ,function (){
+//   $(this).css('background-color', randomNumber());
+//   console.log("Now it's a random color!Cool Beans.");
+//
+// });
+$('#boxX').on('click', '.delete', function () {
+    $(this).parent().remove();
+  });
 
 });
 function randomNumber() {
